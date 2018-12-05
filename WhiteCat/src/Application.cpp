@@ -17,7 +17,7 @@ default:\
 
 Application::Application()
 {
-	graphicsThread = new std::thread();
+
 }
 
 
