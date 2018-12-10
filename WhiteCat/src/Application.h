@@ -3,6 +3,7 @@
 #include <thread>
 #include <mutex>
 #include <functional>
+#include <atomic>
 
 #define WC_GFUNC 0
 #define WC_PFUNC 1
@@ -12,9 +13,8 @@
 
 typedef unsigned int Ftype;
 typedef unsigned int Ttype;
-typedef unsigned char byte;
 
-typedef std::function<void(std::mutex*, void*)> GeneralFunc;
+typedef std::function<void(std::mutex*, WC_Data*)> GeneralFunc;
 
 class Application
 {
@@ -25,6 +25,10 @@ public:
 	void setup(Ftype type, GeneralFunc function);
 	void startThread(Ttype type);
 	void joinThread(Ttype type);
+
+	static bool checkReady();
+	static void setDataReady();
+	static void setDataNotReady();
 
 
 private:
@@ -38,7 +42,7 @@ private:
 	bool ptStarted = false;
 	bool gtStarted = false;
 
-	byte* gData;
-	byte* pData;
+	WC_Data* common;
+	static std::atomic<int> dataFlag;
 };
 

@@ -4,8 +4,18 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-#define TO_STDFUNC_P(x)\
-std::function<void(std::mutex*, void*)>(x)
+#define TO_STDFUNC(x)\
+std::function<void(std::mutex*, WC_Data*)>(x)
+
+typedef unsigned char byte;
+struct Point;
+
+struct WC_Data
+{
+	size_t size;
+	Point* pos_data = nullptr;
+	byte* addata;
+};
 
 struct Point
 {

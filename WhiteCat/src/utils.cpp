@@ -30,6 +30,7 @@ void OGLWrapper::Initialize(GLFWwindow ** window, const Vector2f size, const std
 
 	//Make this the context
 	glfwMakeContextCurrent(*window);
+	glfwSwapInterval(1); //Explicitly enable vsync
 
 	//Init glew experimental
 	glewExperimental = true;

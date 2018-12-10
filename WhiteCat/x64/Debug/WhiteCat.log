@@ -1,4 +1,3 @@
-﻿  main.cpp
-c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(43): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(44): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+﻿  utils.cpp
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.cpp(29): warning C4244: 'argument': conversion from 'const GLfloat' to 'int', possible loss of data
   WhiteCat.vcxproj -> C:\Users\cesar\Desktop\C++\Repositories\WhiteCat\WhiteCat\x64\Debug\WhiteCat.exe

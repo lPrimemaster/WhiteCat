@@ -14,22 +14,26 @@ default:\
 	break;\
 }\
 
+std::atomic<int> Application::dataFlag(0);
+
 
 Application::Application()
 {
-
+	common = static_cast<WC_Data*>(malloc(sizeof(WC_Data)));
+	mutex = new std::mutex();
 }
 
 
 Application::~Application()
 {
-	if(gData != nullptr)
-		free(gData);
-	if (pData != nullptr)
-		free(pData);
+	if (common->pos_data != nullptr)
+		free(common->pos_data);
+	if(common != nullptr)
+		free(common);
 
 	delete graphicsThread;
 	delete  physicsThread;
+	delete mutex;
 }
 
 void Application::setup(Ftype type, GeneralFunc function)
@@ -42,11 +46,26 @@ void Application::startThread(Ttype type)
 	// Only one isntance of gThread and pThread should run
 	if (type == WC_GTHREAD && gtStarted || type == WC_PTHREAD && ptStarted) return;
 
-	SWITCH_T(graphicsThread = new std::thread(std::move(graphicsFunc), mutex, gData); gtStarted = true,
-		physicsThread = new std::thread(std::move(physicsFunc), mutex, pData); ptStarted = true);
+	SWITCH_T(graphicsThread = new std::thread(std::move(graphicsFunc), mutex, common); gtStarted = true,
+		physicsThread = new std::thread(std::move(physicsFunc), mutex, common); ptStarted = true);
 }
 
 void Application::joinThread(Ttype type)
 {
 	SWITCH_T(graphicsThread->join(), physicsThread->join());
+}
+
+bool Application::checkReady()
+{
+	return dataFlag.load(std::memory_order_acquire);
+}
+
+void Application::setDataReady()
+{
+	dataFlag.store(1, std::memory_order_release);
+}
+
+void Application::setDataNotReady()
+{
+	dataFlag.store(0, std::memory_order_release);
 }
