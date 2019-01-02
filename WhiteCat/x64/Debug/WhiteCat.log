@@ -1,3 +1,44 @@
-﻿  utils.cpp
-c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.cpp(29): warning C4244: 'argument': conversion from 'const GLfloat' to 'int', possible loss of data
+﻿  main.cpp
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.h(104): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.h(172): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.h(182): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.h(192): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.h(192): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.h(221): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.h(230): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\utils.h(264): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(70): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(114): warning C4244: 'initializing': conversion from '_Rep' to 'uint', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(115): warning C4244: 'initializing': conversion from '_Rep' to 'uint', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(116): warning C4244: 'initializing': conversion from '_Rep' to 'uint', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(127): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(128): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(134): warning C4455: 'operator ""ms': literal suffix identifiers that do not start with an underscore are reserved
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(174): warning C4244: 'initializing': conversion from '_Rep' to 'uint', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(175): warning C4244: 'initializing': conversion from '_Rep' to 'uint', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+c:\users\cesar\desktop\c++\repositories\whitecat\whitecat\src\main.cpp(176): warning C4244: 'initializing': conversion from '_Rep' to 'uint', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
   WhiteCat.vcxproj -> C:\Users\cesar\Desktop\C++\Repositories\WhiteCat\WhiteCat\x64\Debug\WhiteCat.exe
